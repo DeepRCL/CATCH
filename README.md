@@ -65,17 +65,15 @@ pip install -r requirements.txt
 
 ### DINOv3 backbone weights
 
-The encoder is initialized from DINOv3 weights. Download the official checkpoint from the [DINOv3 repository](https://github.com/facebookresearch/dinov3) and point the config at it:
+The encoder is initialized from DINOv3 weights. Download the official checkpoint from the
+[DINOv3 repository](https://github.com/facebookresearch/dinov3), then point the config at it:
 
 ```yaml
-# configs/catch_base.yaml
+# configs/model.yaml
 model:
-  encoder:
-    name: dinov3_vitb16
-    pretrained_path: /path/to/dinov3_vitb16.pth
+  config_file: ./configs/dinov3_vitb16_pretrain.yaml
+  pretrained_weights: /path/to/dinov3_vitb16.pth
 ```
-
----
 
 ## Data
 
