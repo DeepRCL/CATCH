@@ -164,8 +164,6 @@ To run a single variant, modify the command above:
 ## Results
 
 Full quantitative tables are in the paper; qualitative figures and plots are in [`docs/results/`](docs/results/).
-
-**Legend:** **bold** = best, *italic* = second best.
  
 ## Private test set — per-chamber segmentation
  
