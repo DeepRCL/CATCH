@@ -88,8 +88,7 @@ The private multi-chamber echo dataset (~10k train / ~4k test videos, LV/LA/RA a
 | CAMUS | LV, LA  | https://www.creatis.insa-lyon.fr/Challenge/camus/ |
 | EchoNet-Dynamic | LV | https://echonet.github.io/dynamic/ |
 
-Download each dataset from its official source (registration required), then add required files in data/camus_files:
-
+Download the required CAMUS files from their official source, then place them in `data/camus_files`:
 ---
 
 ## Training
@@ -127,8 +126,6 @@ python src/eval.py \
 `--dataset-name` choices: `private_echo`, `camus`, `echonet`.
 
 Reports per-chamber Dice, IoU, Hausdorff distance (95th percentile), and mean absolute error for ejection fraction, plus the **cross-view consistency** metric described in the paper.
-
-No fine-tuning is performed; label spaces are mapped to the CATCH chamber classes at evaluation time.
 
 ---
 
@@ -219,7 +216,7 @@ Portions of this project were developed with AI assistance:
 ```bibtex
 @inproceedings{catch2026,
   title     = {CATCH: Cross-View Attention for Consistent Multi-Chamber Heart Segmentation},
-  author    = {Bassant Medhat, Nima Hashemi, Baraa Abdelsamad, Edward S. Chen\inst, Samira Sojoudi, Christina L. Luong, Teresa S. M. Tsang, Purang Abolmaesumi},
+  author    = {Bassant Medhat, Nima Hashemi, Baraa Abdelsamad, Edward S. Chen, Samira Sojoudi, Christina L. Luong, Teresa S. M. Tsang, Purang Abolmaesumi},
   booktitle = {MICCAI Workshop on Advances in Simplifying Medical UltraSound (ASMUS)},
   year      = {2026}
 }
