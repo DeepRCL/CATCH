@@ -61,7 +61,7 @@ pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
 pip install -r requirements.txt
 ```
 
-**Requirements:** Python ≥ 3.10, PyTorch ≥ 2.1, CUDA ≥ 12.1. Training was performed on `<N>` × `<GPU model>` GPUs.
+**Requirements:** Python ≥ 3.10, PyTorch ≥ 2.1, CUDA ≥ 12.1. Training was performed on NVIDIA `B200` and `B300` GPUs.
 
 ### DINOv3 backbone weights
 
