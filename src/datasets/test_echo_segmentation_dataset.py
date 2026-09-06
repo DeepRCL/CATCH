@@ -100,7 +100,7 @@ class EchoSegmentationDataset(echo.EchoDataset):
                            [T = frames, C = channels (1 or 3)]
     - "masks":             Tensor of shape (T, 3, 256, 256) 
                            [One-hot encoded: c=0: LV, c=1: LA, c=2: RA]
-    - "spacings":          Tensor of shape (T, 2) [Rescaled dX, dY pixel spacing]
+    - "spacing":          Tensor of shape (T, 2) [Rescaled dX, dY pixel spacing]
     - "pred_view":         String indicating the cardiac view (e.g., "A2C", "A4C")
     - "stream_id":         String ID for dataset tracking
     - "gt_mask_indicies":  Tensor of shape (T,) [Original frame index locations]
@@ -336,7 +336,7 @@ class EchoSegmentationDataset(echo.EchoDataset):
         return {
             "images": images,
             "masks": masks,
-            "spacings": spacing,
+            "spacing": spacing,
             "pred_view": pred_view,
             "labels_name": labels_name_list,
             "stream_id": stream_id_list,

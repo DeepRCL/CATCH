@@ -184,7 +184,7 @@ class MultiViewEchoSegmentationDataset(torch.utils.data.Dataset):
                     "labels_name": labels_name,
                 } if has_label else None,
             }
-
+            # Add view data only if it has not already been added, or if it has a label and the previously added data does not.            
             if view not in view_best or (view_best[view]["loss_type"] == 0 and has_label == 1):
                 view_best[view] = candidate
 
@@ -263,6 +263,10 @@ if __name__ == "__main__":
     for key, value in sample.items():
         if isinstance(value, torch.Tensor):
             print(key, value.shape)
+            if key =="loss_type" or key =="stream_ids":
+                print(value)
+        else:
+            print(key, value)
 
     dataloader = DataLoader(
         multi_view_dataset,

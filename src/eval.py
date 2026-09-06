@@ -67,7 +67,6 @@ def collate_fn(batch: list) -> dict:
         "labels_name": [b["labels_name"] for b in batch],
         "pred_view": [b["pred_view"] for b in batch],
         "stream_id": [b["stream_id"] for b in batch],
-        "patient_id": [b["patient_id"] for b in batch],
         "ef_visual": [b["ef_visual"] for b in batch],
     }
 
